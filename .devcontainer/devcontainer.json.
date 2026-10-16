@@ -1,0 +1,25 @@
+{
+  "name": "Ambiente Flutter",
+  "image": "ghcr.io/cirruslabs/flutter:stable",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "dart.flutterSdkPath": "/sdks/flutter"
+      },
+      "extensions": [
+        "dart-code.flutter",
+        "dart-code.dart-code",
+        "eamodio.gitlens",
+        "usernamehw.errorlens"
+      ]
+    }
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Flutter Web App",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "flutter doctor -v"
+}
